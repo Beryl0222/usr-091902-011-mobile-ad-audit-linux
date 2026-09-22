@@ -4,14 +4,45 @@
     "采集人员",
     "合规复核员",
     "应用运营者",
+    "广告主",
+    "SDK提供方",
     "监管承办人"
   ],
-  "参考状态": [
-    "待采集",
-    "待复核",
-    "涉嫌违规",
-    "整改中",
-    "已复测"
+  "责任主体类型": {
+    "app_operator": "应用运营者",
+    "advertiser": "广告主",
+    "sdk_provider": "嵌入SDK提供方"
+  },
+  "操作轨迹": {
+    "normal": "正常用户",
+    "screen_reader": "读屏用户",
+    "elderly": "老人模式"
+  },
+  "事件类型": [
+    "ad_shown",
+    "close_entry",
+    "sensor",
+    "jump",
+    "network",
+    "close_attempt"
   ],
+  "问题代码": {
+    "LOCKSCREEN_NO_CLOSE": "锁屏画报无有效关闭路径",
+    "SPLASH_CLOSE_DEFICIENT": "开屏/插屏关闭入口缺失或不合规",
+    "CLOSE_NOT_ACCESSIBLE": "关闭入口读屏不可达",
+    "SHAKE_MISTRIGGER": "摇一摇低阈值误触跳转",
+    "AUTO_REDIRECT": "无用户意图自动跳转"
+  },
+  "问题状态": {
+    "suspected": "涉嫌（自动规则标记，待复核）",
+    "confirmed": "已确认（可出具告知材料）",
+    "confirmed_pending_review": "已确认但出现新证据，待再复核",
+    "dismissed": "已排除"
+  },
+  "版本依据": {
+    "spec_version": "规范版本，决定阈值与整改期限（2024.1 / 2025.1）",
+    "script_version": "测试脚本版本，任务创建时固化，更新只影响新任务",
+    "rules_version": "规则引擎版本，随每条判定与告知材料入档"
+  },
   "说明": "字段仅用于统一领域称谓，业务记录应由正式接口产生。"
 }
